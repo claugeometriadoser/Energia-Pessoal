@@ -22,7 +22,7 @@ const PROFILES = {
      luz:["intuição","percepção fina","adaptação","flexibilidade"],
      sombra:["dispersão","ansiedade","falta de ancoragem"],
      pergunta:"👉 O que você está sentindo antes de entender?"},
-  5:{symbol:"⬤",emoji:"🟡",name:"CENTRO — TERRA CENTRAL",tema:"Equilíbrio • Transição • Reorganização",
+  5:{symbol:"⬤",emoji:"☯️",name:"CENTRO — TERRA CENTRAL",tema:"Equilíbrio • Transição • Reorganização",
      luz:["visão do todo","capacidade de ajuste","maturidade","centramento"],
      sombra:["confusão","instabilidade","sensação de estar perdido"],
      pergunta:"👉 O que precisa ser reorganizado agora?"},
