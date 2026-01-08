@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Energia Pessoal — Geometria do SER</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Leitura gratuita da Energia Pessoal (número + trigrama) e convite ao Mapa das Forças do SER." />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="brand">
+        <img class="logo" src="logo.png" alt="Geometria do SER — Mentoria & Consultoria" />
+        <div class="brandText">
+          <div class="kicker">Geometria do SER</div>
+          <h1 class="title">Energia Pessoal — EU no mundo</h1>
+          <p class="sub">Uma leitura objetiva da sua Energia Pessoal para reconhecer como você se posiciona no mundo.</p>
+    <p class="quote">“O I Ching a todo instante insiste no autoconhecimento.” <span class="quoteAuthor">C. G. Jung</span></p>
+
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2 class="h2">Calcule agora</h2>
+      <form id="calcForm" class="form">
+        <label class="field">
+          <span>Data de nascimento</span>
+          <input id="dob" name="dob" type="date" required />
+        </label>
+
+        <label class="field">
+          <span>Sexo</span>
+          <select id="sex" name="sex" required>
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+          </select>
+        </label>
+
+        <button class="btn" type="submit">Ver minha Energia Pessoal</button>
+        </form>
+    </section>
+
+    <section id="result" class="card hidden" aria-live="polite">
+      <div class="resultTop">
+        <div class="badge">
+          <div class="badgeTitle">Sua Energia Pessoal é</div>
+          <div class="badgeNum" id="num">—</div>
+        </div>
+        <div class="trigram">
+          <div class="triSymbol" id="triSymbol">—</div>
+          <div class="triName" id="triName">—</div>
+        </div>
+      </div>
+
+      <div class="meta" id="meta"></div>
+
+      <div class="blocks">
+        <div class="block">
+          <div class="blockTitle">FORÇAS - características principais</div>
+          <div class="blockBody" id="tema"></div>
+        </div>
+
+        <div class="grid2">
+          <div class="block">
+            <div class="blockTitle">Luz</div>
+            <ul class="list" id="luz"></ul>
+          </div>
+          <div class="block">
+            <div class="blockTitle">Sombra</div>
+            <ul class="list" id="sombra"></ul>
+          </div>
+        </div>
+
+        <div class="block q">
+          <div class="blockTitle">Pergunta‑chave</div>
+          <div class="blockBody" id="pergunta"></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a id="cta" class="btn secondary" href="#" target="_blank" rel="noopener">
+          Aprofundar com o Mapa das Forças do SER
+        </a>
+        <button id="saveBtn" class="btn ghost" type="button">Salvar imagem</button>
+        <button id="shareBtn" class="btn ghost" type="button">Compartilhar</button>
+      </div>
+
+      <p class="ctaNote">Leitura completa exclusiva e personalizada. Envio detalhes e valor na conversa.</p>
+
+      <canvas id="shareCanvas" width="1200" height="630" class="hidden" aria-hidden="true"></canvas>
+      <p class="fineprint">Este app oferece uma leitura inicial (Energia Pessoal). O aprofundamento contempla as 3 energias do <strong>Mapa das Forças do SER</strong>: Essência, Expressão e Energia Pessoal.</p>
+    </section>
+
+    <footer class="foot">
+      <p class="footNote">© Geometria do SER • Ferramenta gratuita de leitura simbólica.</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

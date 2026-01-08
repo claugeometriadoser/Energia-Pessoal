@@ -1,0 +1,317 @@
+/* Estética neutra e sofisticada (sem dependências) */
+:root{
+  --bg:#0e0f12;
+  --panel:#151820;
+  --text:#f1f2f4;
+  --muted:#b9bdc7;
+  --line:#2a2f3b;
+  --accent:#d7d1c6; /* off-white quente */
+  --shadow: 0 14px 40px rgba(0,0,0,.45);
+  --radius: 18px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:
+    radial-gradient(900px 400px at 10% 0%, rgba(215,209,198,.08), transparent 60%),
+    radial-gradient(700px 360px at 90% 10%, rgba(215,209,198,.06), transparent 55%),
+    linear-gradient(180deg, var(--bg), #07080b);
+  color:var(--text);
+  font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+.wrap{
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px 18px 44px;
+}
+
+.hero{ margin: 6px 0 14px; }
+
+.brand{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+
+.logo{
+  width:auto;
+  height:88px;           /* reduzido para caber na primeira dobra */
+  max-width: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.35));
+}
+
+.brandText{ min-width: 0; }
+
+.kicker{
+  color: var(--muted);
+  letter-spacing:.18em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.title{
+  margin:.2rem 0 .2rem;
+  font-size: 34px;
+  letter-spacing:.01em;
+}
+
+.sub{
+  margin:0;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.card{
+  margin-top: 14px;
+  padding: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.h2{
+  margin: 0 0 10px;
+  font-size: 18px;
+  letter-spacing:.02em;
+}
+
+.form{
+  display:grid;
+  gap:12px;
+  align-items:end;
+}
+
+/* harmoniza: uma linha no desktop, empilha no mobile */
+@media (min-width: 740px){
+  .form{
+    grid-template-columns: 1fr 1.3fr auto;
+  }
+}
+
+.field{ display:grid; gap:6px; }
+.field span{ color: var(--muted); font-size: 13px; }
+
+input, select{
+  width:100%;
+  padding: 12px 12px;
+  background: rgba(0,0,0,.28);
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  outline:none;
+}
+
+input:focus, select:focus{
+  border-color: rgba(215,209,198,.55);
+  box-shadow: 0 0 0 4px rgba(215,209,198,.10);
+}
+
+.hint{
+  color: rgba(241,242,244,.65);
+  font-size: 12px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(215,209,198,.45);
+  background: rgba(215,209,198,.10);
+  color: var(--text);
+  cursor:pointer;
+  text-decoration:none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btn:hover{ background: rgba(215,209,198,.14); }
+.btn:active{ transform: translateY(1px); }
+
+.btn.secondary{
+  border-color: rgba(255,255,255,.14);
+  background: rgba(255,255,255,.06);
+}
+
+.btn.ghost{
+  border-color: rgba(255,255,255,.14);
+  background: transparent;
+}
+
+.hidden{ display:none; }
+
+.resultTop{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.badge{
+  padding: 12px 14px;
+  border: 1px solid rgba(215,209,198,.25);
+  border-radius: 16px;
+  background: rgba(215,209,198,.06);
+  min-width: 150px;
+}
+
+.badgeTitle{
+  color: rgba(241,242,244,.70);
+  font-size: 12px;
+  letter-spacing:.14em;
+  text-transform: uppercase;
+}
+
+.badgeNum{
+  font-size: 44px;
+  font-weight: 750;
+  letter-spacing:.02em;
+  color: var(--accent);
+}
+
+.trigram{
+  flex:1;
+  min-width: 220px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 16px;
+  background: rgba(0,0,0,.20);
+}
+
+.triSymbol{ font-size: 34px; color: var(--accent); }
+.triName{ font-size: 16px; color: var(--text); margin-top: 4px; }
+
+.meta{
+  margin-top: 10px;
+  color: rgba(241,242,244,.70);
+  font-size: 13px;
+}
+
+.blocks{ margin-top: 14px; display:grid; gap: 12px; }
+
+.block{
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(0,0,0,.18);
+}
+
+.blockTitle{
+  font-size: 12px;
+  letter-spacing:.14em;
+  text-transform: uppercase;
+  color: rgba(241,242,244,.65);
+  margin-bottom: 8px;
+}
+
+.blockBody{ color: var(--text); }
+
+.grid2{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 740px){
+  .grid2{ grid-template-columns: 1fr 1fr; }
+}
+
+.list{ margin:0; padding-left: 18px; color: var(--text); }
+.list li{ margin: 6px 0; color: rgba(241,242,244,.92); }
+
+.q{
+  border-color: rgba(215,209,198,.22);
+  background: rgba(215,209,198,.05);
+}
+
+/* CTA não pode cobrir conteúdo: sempre abaixo, com respiro */
+.actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 18px;
+}
+
+.ctaNote{
+  margin: 10px 2px 0;
+  color: rgba(241,242,244,.72);
+  font-size: 13px;
+}
+
+.fineprint{
+  margin: 14px 2px 0;
+  color: rgba(241,242,244,.60);
+  font-size: 12px;
+}
+
+.foot{
+  margin-top: 18px;
+  text-align:center;
+  color: rgba(241,242,244,.45);
+  font-size: 12px;
+}
+
+
+/* Toggle (ano solar) */
+.toggleRow{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  margin-top: 6px;
+  color: rgba(241,242,244,.72);
+  font-size: 13px;
+}
+.switch{
+  position:relative;
+  width: 42px;
+  height: 24px;
+  display:inline-block;
+}
+.switch input{ display:none; }
+.slider{
+  position:absolute; inset:0;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  cursor:pointer;
+  transition: .2s;
+}
+.slider:before{
+  content:"";
+  position:absolute;
+  height: 18px; width: 18px;
+  left: 3px; top: 2px;
+  background: rgba(215,209,198,.85);
+  border-radius: 50%;
+  transition: .2s;
+}
+.switch input:checked + .slider{
+  background: rgba(215,209,198,.18);
+  border-color: rgba(215,209,198,.30);
+}
+.switch input:checked + .slider:before{ transform: translateX(18px); }
+
+/* Mais harmônico: campos lado a lado já em telas médias */
+@media (min-width: 560px) and (max-width: 739px){
+  .form{
+    grid-template-columns: 1fr 1fr;
+  }
+  .form .btn{ grid-column: 1 / -1; }
+}
+
+/* Citação no cabeçalho */
+.quote{
+  margin-top: 8px;
+  color: rgba(241,242,244,.70);
+  font-size: 16px;
+}
+.quoteAuthor{
+  color: rgba(215,209,198,.9);
+  font-weight: 600;
+}
