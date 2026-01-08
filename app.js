@@ -26,7 +26,7 @@ const PROFILES = {
      luz:["visão do todo","capacidade de ajuste","maturidade","centramento"],
      sombra:["confusão","instabilidade","sensação de estar perdido"],
      pergunta:"👉 O que precisa ser reorganizado agora?"},
-  6:{symbol:"☰",emoji:"☰",name:"CÉU — QIAN",tema:"Direção • Propósito • Liderança",
+  6:{symbol:"☰",emoji:"🌌",name:"CÉU — QIAN",tema:"Direção • Propósito • Liderança",
      luz:["clareza","iniciativa consciente","autoridade interna"],
      sombra:["controle excessivo","rigidez","desconexão emocional"],
      pergunta:"👉 Que direção você está sendo chamada a assumir?"},
